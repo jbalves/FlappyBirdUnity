@@ -7,6 +7,9 @@ public class FlappyBirdController : MonoBehaviour {
 	[Header("Velocity")]
 	public float flappyVelocity;
 
+	[Header("FlappyBird states")]
+	public bool isDead = false;
+
 	[Header("Animation")]
 	private Animator animator;
 	private Rigidbody2D rigidBody2d;
@@ -25,6 +28,10 @@ public class FlappyBirdController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		if(isDead){
+			return;
+		}
 		
 		if (Input.GetKeyDown (KeyCode.Space)) {
 			FlappyWings ();
@@ -41,5 +48,15 @@ public class FlappyBirdController : MonoBehaviour {
 		animator.SetTrigger ("Flappy");
 		//Movimenta o Flappy Bird
 		rigidBody2d.velocity = Vector2.up * flappyVelocity;
+	}
+
+	void OnCollisionEnter2D(Collision2D collision) {
+		//Se for pipe então mata o Flappy Bird
+		if(collision.collider.CompareTag("Pipe")){
+			//Dead
+			isDead = true;
+			//Deixa de colidir
+			GetComponent<Collider2D> ().isTrigger = true;
+		}
 	}
 }
