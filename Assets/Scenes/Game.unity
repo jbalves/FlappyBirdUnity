@@ -387,7 +387,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 749396977}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &749396977
@@ -545,7 +556,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41a66f4a16c0d7a4886b52f561dee736, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollingObjectPrefab: {fileID: 0}
+  scrollingObjectPrefab: {fileID: 114833046472780654, guid: 9ed8d9cdfafa9414ab34ea8729257610,
+    type: 2}
   maxObjects: 4
   viewportOffset: {x: 0, y: 0}
   minYVar: -6
@@ -629,7 +641,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1176857431}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -4}
+  m_LocalPosition: {x: 0, y: 0, z: -1.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

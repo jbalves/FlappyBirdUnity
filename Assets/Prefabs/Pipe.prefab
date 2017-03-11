@@ -53,7 +53,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4561754376847802}
-  - component: {fileID: 114610411683499064}
+  - component: {fileID: 114833046472780654}
   m_Layer: 0
   m_Name: Pipe
   m_TagString: Pipe
@@ -98,7 +98,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1418838990452392}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8, y: 0, z: -1}
+  m_LocalPosition: {x: -0.4, y: 0.49, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4737986715334502}
@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08736a423c5f081469360e659330a8da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114610411683499064
+--- !u!114 &114833046472780654
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -194,10 +194,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1418838990452392}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afc4dfbb548835943b2229cafaa35f28, type: 3}
+  m_Script: {fileID: 11500000, guid: 704d9ab1b874041cea24fa8e2a36fd66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pipeVelocity: 4
+  scrollVelocity: {x: -4, y: 0, z: 0}
+  size: {x: 1.48, y: 35.14, z: 1.06}
 --- !u!212 &212235524307169162
 SpriteRenderer:
   m_ObjectHideFlags: 1
