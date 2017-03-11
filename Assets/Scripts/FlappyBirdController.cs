@@ -14,8 +14,11 @@ public class FlappyBirdController : MonoBehaviour {
 	private Animator animator;
 	private Rigidbody2D rigidBody2d;
 
+	public GameManager gameManager;
+
 	// Use this for initialization
 	void Start () {
+		gameManager = FindObjectOfType<GameManager> ();
 		animator = GetComponent<Animator> ();
 		rigidBody2d = GetComponent<Rigidbody2D> ();
 
@@ -33,7 +36,11 @@ public class FlappyBirdController : MonoBehaviour {
 			return;
 		}
 		
-		if (Input.GetKeyDown (KeyCode.Space)) {
+//		if (Input.GetKeyDown (KeyCode.Space)) {
+//			FlappyWings ();
+//		}
+
+		if (Input.GetMouseButtonDown (0)) {
 			FlappyWings ();
 		}
 
@@ -57,6 +64,8 @@ public class FlappyBirdController : MonoBehaviour {
 			isDead = true;
 			//Deixa de colidir
 			GetComponent<Collider2D> ().isTrigger = true;
+
+			gameManager.PlayerIsDead ();
 		}
 	}
 }
