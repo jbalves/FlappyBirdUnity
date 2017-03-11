@@ -25,4 +25,14 @@ public class ShareScreenshot : MonoBehaviour {
 		AndroidJavaClass jc = new AndroidJavaClass ("com.unity3d.player.UnityPlayer");
 		return jc.CallStatic<AndroidJavaObject> ("currentActivity");
 	}
+
+	public string getAndroidExternalStoragePath() {
+		string path = " ";
+
+		AndroidJavaClass jc = new AndroidJavaClass ("Environment");
+
+		path = jc.CallStatic<AndroidJavaObject> ("getExternalStorageDirectory").Call<String> ("getAbsolutePath");
+
+		return path;
+	}
 }
