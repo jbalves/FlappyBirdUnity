@@ -31,7 +31,7 @@ public class ShareScreenshot : MonoBehaviour {
 
 		AndroidJavaClass jc = new AndroidJavaClass ("Environment");
 
-		path = jc.CallStatic<AndroidJavaObject> ("getExternalStorageDirectory").Call<String> ("getAbsolutePath");
+		path = jc.CallStatic<AndroidJavaObject> ("getExternalStorageDirectory").Call<string> ("getAbsolutePath");
 
 		return path;
 	}
